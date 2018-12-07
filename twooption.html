@@ -11,6 +11,45 @@
 
 </head>
 <body>
+  <div class="row">
+    <div class="col s12 offset-m2 m8">
+      <h2>Второй вариант</h2>
+      <h4>Решение</h4>
+      <div class="card-panel col s12 m8 grey lighten-5 z-depth-1">
+        <p id="otvet"></p>
+      </div>
+      <div class="row">
+         <form class="col s12">
+           <div class="row">
+             <div class="input-field col s12 m4">
+               <input placeholder="Например: 1" id="int" type="number" class="validate">
+               <label for="int">Введите цифру больше 0</label>
+             </div>
+           </div>
+           <div class="row center-align">
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('Сумма');" class="waves-effect waves-light btn">Сумма</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('СуммаКубов');" class="waves-effect waves-light btn">Сумма кубов</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('КолВоНечётных');" class="waves-effect waves-light btn">Кол-во нечетных</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('МинЦифра');" class="waves-effect waves-light btn">Минимальная цифра</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('КоличествоДелителейЧисла');" class="waves-effect waves-light btn">Количество делителей числа</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="twoOption('Массив');" class="waves-effect waves-light btn">Массив</a>
+             </div>
+           </div>
+         </form>
+      </div>
+    </div>
+  </div>
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/materialize.js"></script>
