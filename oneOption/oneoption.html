@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--
+  Вот это огромный и длинный код, это картинка, которая отображается в закладках в браузере сверху.
+  Я использую такой метод, чтобы не грузить картинку с диска, а печатать ее по коду
+  (код не я писал, в инете можно любую картинку превратить в этот код)
+  -->
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs12c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFdSURBVFhH7Za/SgNBEMavEAULC5NdtLdKbaVPkCpPIdjbCle4Y8AuRKMWZvew8yV8CjsbhVgpiA+gzlzmQtjs6IprIewPhtzONzv37eXfFJmMT+emXNYOTrQzE3z9SBPUy/SpN99GhgrDTVKE6fNtZLSFJypW46MdTv0aZWGXDUw4JdO45WUyovtmA9lANpAN/BX/14C/cf26XNPWOPxdf1PWPOP1aGswWGFZJJkB/LOqmtwsLAxZFmlqeRmPv5FOTuuNK+hwKopkBpSDR84dRg0YjN8nGn8jPu49fN/f67yFe12ZHktfkswA0Xamq5y5azQ0tM+SSKhPEL9Q3HhbLuETOCANvw0PnBUR+/hg0+lIhmPUd6NUqzLbda2DF04F+eFItjiU4gmBZTJ45uu455Tl2UlDMd9HpB7LLRyT2zrwev7TvnlZrmKjC9ReKfD055RjWTCw2CeTmVIUn6z8tBCUamHWAAAAAElFTkSuQmCC">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/materialize.css">
+  <title>Первый вариант</title>
+
+</head>
+<body style="overflow-x: hidden;">
+  <div class="row">
+    <div class="col s12 offset-m2 m8">
+      <h2>Первый вариант</h2>
+      <h4>Решение</h4>
+      <div class="card-panel col s12 m8 grey lighten-5 z-depth-1">
+        <p id="otvet"></p>
+      </div>
+      <div class="row">
+         <form class="col s12">
+           <div class="row">
+             <div class="input-field col s12 m4">
+               <input placeholder="Например: 1" id="int" type="number" class="validate">
+               <label for="int">Введите цифру больше 0</label>
+             </div>
+           </div>
+           <!--
+           Это обычная верстка, не пугайтесь большого количество тегов, они одинаковые,
+           просто чтобы все было адаптивно, приходится писать так, с помощью того же php, я бы вывел все в 4 строки, ну почти)
+           -->
+           <div class="row center-align">
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('Факториал');" class="waves-effect waves-light btn">Факториал</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('СуммаКубов');" class="waves-effect waves-light btn">Сумма кубов</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('КолВоЧетных');" class="waves-effect waves-light btn">Кол-во четных</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('МаксЦифра');" class="waves-effect waves-light btn">Максимальная цифра</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('ПростоеЛиЧисло');" class="waves-effect waves-light btn">Простое ли число?</a>
+             </div>
+             <div class="input-field col s12 m4">
+              <a style="width: 100%;" onclick="oneOption('Массив');" class="waves-effect waves-light btn">Массив</a>
+             </div>
+           </div>
+         </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+<!--
+Здесь я подключаю библиотеку Jquery, а также библиотеку Materialize и наш файл скриптов menu.js
+Почему menu.js? Не спрашивайте)
+-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+</html>
