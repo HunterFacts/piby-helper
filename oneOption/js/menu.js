@@ -45,7 +45,7 @@ function oneOption (param){
     // Здесь тоже самое, тот же цикл, просто формула вычисления другая, простая математика
     for (var i = 1; i <= int; i++){
       if(i%2 == 0){
-        iV2 = i*i;
+        iV2 = i*i*i;
         symm = iV2 + symm;
       }
     //  Выводим в наш блок ответ
@@ -138,7 +138,7 @@ function oneOption (param){
     }
 
     //Поиск максимального числа в массиве
-    for (var i = 1; i < symm.length; i++){
+    for (var i = 0; i < symm.length; i++){
         if (symmBig < Number(symm[i])){
           symmBig = Number(symm[i]);
         }
