@@ -1,0 +1,62 @@
+<html><body>
+  <div id="mapdiv"></div>
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+	var zoom=16;
+    var lonLat;
+	var markers = new OpenLayers.Layer.Markers( "Markers" );
+	/*lonLat = new OpenLayers.LonLat( 60.541794 ,56.770983 )
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+          );
+    markers.addMarker(new OpenLayers.Marker(lonLat));*/
+
+	lonLat = new OpenLayers.LonLat( 60.537281 ,56.773301 )
+	  .transform(
+		new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+		map.getProjectionObject() // to Spherical Mercator Projection
+	  );/*
+    markers.addMarker(new OpenLayers.Marker(lonLat));   
+    
+
+    
+    map.addLayer(markers);
+    
+    map.addLayer(markers);
+    */
+    map.setCenter (lonLat, zoom);
+	
+	navigator.geolocation.getCurrentPosition(function(location) {
+	var i = 0.0001;
+	lonLat = new OpenLayers.LonLat(location.coords.longitude, location.coords.latitude)
+	  .transform(
+		new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+		map.getProjectionObject() // to Spherical Mercator Projection
+	  );
+	var newmarker = new OpenLayers.Marker(lonLat);
+	 markers.addMarker(newmarker);
+	 map.addLayer(markers);
+	 map.setCenter (lonLat, zoom);
+	 
+	setTimeout(function() {
+	
+	markers.destroy();
+	markers = new OpenLayers.Layer.Markers( "Markers" );
+	lonLat = new OpenLayers.LonLat(location.coords.longitude, location.coords.latitude)
+	  .transform(
+		new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+		map.getProjectionObject() // to Spherical Mercator Projection
+	  );
+	newmarker = new OpenLayers.Marker(lonLat);
+	 markers.addMarker(newmarker);
+	 map.addLayer(markers);
+	  var i = i+0.0001;
+	}, 1000);
+	});
+	
+
+  </script>
+</body></html>

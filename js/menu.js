@@ -25,7 +25,7 @@ function oneOption (param){
     var iV2 = 0;
     for (var i = 1; i <= int; i++){
       if(i%2 == 0){
-        iV2 = i*i;
+        iV2 = i*i*i;
         symm = iV2 + symm;
       }
     text = $("#otvet").html(symm);
@@ -133,7 +133,7 @@ function twoOption (param){
     var iV2 = 0;
     for (var i = 1; i <= int; i++){
       if(i%2 != 0){
-        iV2 = i*i;
+        iV2 = i*i*i;
         symm = iV2 + symm;
       }
     text = $("#otvet").html(symm);
